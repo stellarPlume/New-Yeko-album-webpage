@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-    <link rel="stylesheet" href="./style/index.css" />
+    <link rel="stylesheet" href="./style/mobile.css" />
     <title>ニューヨエコ - Yoeko</title>
     <style>
       * {
@@ -17,9 +17,9 @@
       body {
         background-color: #fff;
         background-image: url(./images/bgi.png);
-        background-size: auto 90vh;
+        background-size: auto 80vh;
         background-repeat: no-repeat;
-        background-position: 28vw bottom;
+        background-position: center bottom;
         height: 100vh;
         width: 100vw;
         overflow: hidden;
@@ -46,8 +46,8 @@
       function monitorDevice() {
         const deviceTypeReg = /iPhone|iPad|iPod|Android/i
         const isMobile = deviceTypeReg.test(navigator.userAgent)
-        if (isMobile) {
-          window.location.href = './mobile.html'
+        if (!isMobile) {
+          window.location.href = './index.html'
         }
       }
       monitorDevice()
