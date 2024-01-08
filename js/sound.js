@@ -1,4 +1,3 @@
-import 'https://cdn.bootcdn.net/ajax/libs/howler/2.2.3/howler.core.min.js'
 let sound = null
 let audioId = null
 let activeId = null
@@ -11,7 +10,7 @@ function palySound(id) {
   if (sound) sound.pause(audioId)
   // 创建音频
   sound = new Howl({
-    src: [`../sound/${id}.mp3`], // 音频地址
+    src: [`./sound/${id}.mp3`], // 音频地址
     html5: true
   })
   // 播放
