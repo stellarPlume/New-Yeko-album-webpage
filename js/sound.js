@@ -2,7 +2,7 @@ let sound = null
 let audioId = null
 let activeId = null
 
-const items = document.querySelectorAll('.sound .item')
+const items = document.querySelectorAll('.sound .main .item')
 
 // 播放
 function palySound(id) {
@@ -25,7 +25,7 @@ function palySound(id) {
       activeId = 1
     }
     // 高亮对应的歌
-    const activeEle = document.querySelector('.sound .active')
+    const activeEle = document.querySelector('.sound .main .active')
     activeEle && activeEle.classList.remove('active')
     items.forEach(item => {
       if (item.dataset.id == activeId) {
@@ -37,13 +37,13 @@ function palySound(id) {
   })
 }
 
-const soundEle = document.querySelector('.sound')
+const soundEle = document.querySelector('.sound .main')
 let isPlay = true
 
 soundEle.addEventListener('click', e => {
-  // 重复不生效
+  // 重复点击不生效
   if (e.target.dataset.id == activeId)
-    return (function () {
+    return (() => {
       if (isPlay) {
         isPlay = false
         sound.pause(audioId)
@@ -54,7 +54,7 @@ soundEle.addEventListener('click', e => {
     })()
 
   // 点击高亮
-  const activeEle = document.querySelector('.sound .active')
+  const activeEle = document.querySelector('.sound .main .active')
   activeEle && activeEle.classList.remove('active')
   e.target.classList.add('active')
   // 播放音频

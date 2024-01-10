@@ -1,7 +1,18 @@
+body {
+  background-color: #fff;
+  background-image: url(../images/bgi.png);
+  background-size: auto 90vh;
+  background-repeat: no-repeat;
+  background-position: 28vw bottom;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
 .sound {
   width: 20%;
   min-width: 300px;
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
   left: 18%;
@@ -10,30 +21,32 @@
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   padding: 0 1vw;
-  .item {
-    height: 5vh;
-    min-height: 55px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1.5vh;
-    color: #fff;
-    font-size: 1vw;
-    text-shadow: 1px 1px 2px black;
-    text-align: center;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 5px 0.5px rgba(0, 0, 0, 0.2);
-    transition: all linear 0.1s;
-    cursor: pointer;
-    &:last-child {
-      margin-bottom: 1.5vh;
+  .main {
+    .item {
+      height: 5vh;
+      min-height: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1.5vh;
+      color: #fff;
+      font-size: 1vw;
+      text-shadow: 1px 1px 2px black;
+      text-align: center;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 5px 0.5px rgba(0, 0, 0, 0.2);
+      transition: all linear 0.1s;
+      cursor: pointer;
+      &:last-child {
+        margin-bottom: 1.5vh;
+      }
     }
-  }
-  .active,
-  .item:hover {
-    color: #63b0e4;
-    text-shadow: 1px 1px 2px #63b0e4;
-    font-size: 1.1vw;
+    .active,
+    .item:hover {
+      color: #63b0e4;
+      text-shadow: 1px 1px 2px #63b0e4;
+      font-size: 1.1vw;
+    }
   }
 }

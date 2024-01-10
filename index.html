@@ -6,42 +6,30 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
+    <link rel="shortcut icon" href="./assets/favicon.ico" />
+    <link rel="stylesheet" href="./style/base.css" />
     <link rel="stylesheet" href="./style/index.css" />
     <title>ニューヨエコ - Yoeko</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        background-color: #fff;
-        background-image: url(./images/bgi.png);
-        background-size: auto 90vh;
-        background-repeat: no-repeat;
-        background-position: 28vw bottom;
-        height: 100vh;
-        width: 100vw;
-        overflow: hidden;
-      }
-    </style>
   </head>
   <body>
+    <!-- 音符下落 -->
     <div id="fall"></div>
     <script src="./js/fall.js"></script>
-
+    <!-- 专辑音频 -->
     <div class="sound">
-      <div class="item" data-id="1">友達のうた (New Yoeko ver.)</div>
-      <div class="item" data-id="2">夜な夜な夜な (New Yoeko ver.)</div>
-      <div class="item" data-id="3">卵とじ (New Yoeko ver.)</div>
-      <div class="item" data-id="4">昼の月 (New Yoeko ver.)</div>
-      <div class="item" data-id="5">今日も雨 (New Yoeko ver.)</div>
-      <div class="item" data-id="6">ドーパミン</div>
-      <div class="item" data-id="7">楯 (New Yoeko ver.)</div>
+      <ul class="main">
+        <li class="item" data-id="1">友達のうた (New Yoeko ver.)</li>
+        <li class="item" data-id="2">夜な夜な夜な (New Yoeko ver.)</li>
+        <li class="item" data-id="3">卵とじ (New Yoeko ver.)</li>
+        <li class="item" data-id="4">昼の月 (New Yoeko ver.)</li>
+        <li class="item" data-id="5">今日も雨 (New Yoeko ver.)</li>
+        <li class="item" data-id="6">ドーパミン</li>
+        <li class="item" data-id="7">楯 (New Yoeko ver.)</li>
+      </ul>
     </div>
     <script src="./utils/howler.js"></script>
     <script src="./js/sound.js"></script>
-
+    <!-- 设备检测 -->
     <script>
       function monitorDevice() {
         const deviceTypeReg = /iPhone|iPad|iPod|Android/i
