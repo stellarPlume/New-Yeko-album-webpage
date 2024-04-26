@@ -50,8 +50,8 @@ function createChildEle() {
     ]
     let i = Math.floor(Math.random() * arr.length)
     childEle.innerHTML = arr[i]
-    childEle.style.minWidth = '27px'
-    childEle.style.width = '1.5%'
+    childEle.style.minWidth = '32px'
+    childEle.style.width = '1.7vw'
     childEle.children[0].style.width = '100%'
   }, 900)
 }
