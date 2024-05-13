@@ -9,7 +9,7 @@ Obj.prototype.fall = function (parentEle, childEle) {
   let speed = -60 // 位置初始化
   setTimeout(() => {
     childEle.style.opacity = 1 // 位置初始化后显示
-  }, 20)
+  }, 30)
 
   // 定于下落
   setInterval(function () {
@@ -53,7 +53,7 @@ function createChildEle() {
     childEle.style.minWidth = '32px'
     childEle.style.width = '1.7vw'
     childEle.children[0].style.width = '100%'
-  }, 900)
+  }, 1200)
 }
 createChildEle()
 
