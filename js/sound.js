@@ -1,5 +1,5 @@
-let sound = null
-let audioId = null
+let soundModel = null
+let soundID = null
 let activeId = null
 
 const items = document.querySelectorAll('.sound .main .item')
@@ -7,16 +7,16 @@ const items = document.querySelectorAll('.sound .main .item')
 // 播放
 function palySound(id) {
   // 清除上一个音频
-  if (sound) sound.pause(audioId)
+  if (soundModel) soundModel.pause(soundID)
   // 创建音频
-  sound = new Howl({
+  soundModel = new Howl({
     src: [`./sound/${id}.mp3`], // 音频地址
     html5: true
   })
   // 播放
-  audioId = sound.play()
+  soundID = soundModel.play()
   // 播放完毕
-  sound.on('end', function () {
+  soundModel.on('end', function () {
     if (activeId !== items.length) {
       // 切换下一首歌
       activeId += 1
@@ -46,10 +46,10 @@ soundEle.addEventListener('click', e => {
     return (() => {
       if (isPlay) {
         isPlay = false
-        sound.pause(audioId)
+        soundModel.pause(soundID)
       } else {
         isPlay = true
-        sound.play(audioId)
+        soundModel.play(soundID)
       }
     })()
 
@@ -65,13 +65,13 @@ soundEle.addEventListener('click', e => {
 // 空格暂停播放
 document.addEventListener('keydown', e => {
   if (e.code === 'Space') {
-    if (!audioId) return
+    if (!soundID) return
     if (isPlay) {
       isPlay = false
-      sound.pause(audioId)
+      soundModel.pause(soundID)
     } else {
       isPlay = true
-      sound.play(audioId)
+      soundModel.play(soundID)
     }
   }
 })
